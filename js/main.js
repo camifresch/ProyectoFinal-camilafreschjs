@@ -36,4 +36,8 @@ if ((servicio == "1" || "3") & (importe >= 2800)) {
     alert ("Saldo insuficiente");
 }
 
+function saludar(nombre) {
+    alert (`Saludos ${nombre}`);
+}
 
+saludar(nombre)
