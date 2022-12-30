@@ -17,7 +17,7 @@ dateForm.addEventListener("input", function () {
   }
 });
 
-let formulario = document.querySelector("#formulario");
+let formulario = document.querySelector(".formulario");
 
 let info = document.querySelector(".info");
 
