@@ -77,3 +77,15 @@ function carritoHTML() {
 function limpiarHTML() {
   carrito.innerHTML = "";
 }
+
+// eliminar servicios
+
+function eliminarServicio(e) {
+  if (e.target.classList.contains("btn-danger")) {
+    let servicioID = e.target.getAttribute("id");
+    articulosCarrito = articulosCarrito.filter(
+      (servicio) => servicio.id !== servicioID
+    );
+    carritoHTML();
+  }
+}
