@@ -35,21 +35,22 @@ const mostrarInfo = formulario.addEventListener("submit", function (e) {
 const cards = document.querySelectorAll(".card");
 cards.forEach((card) => {
   card.addEventListener("click", (e) => {
-    leerDatosServicio(e.target.parentElement);
+    leerDatosServicios(e.target.parentElement);
   });
 });
 
 
 let articulosCarrito = [];
 
-function leerDatosServicio(servicios) {
-  const infoServicio = {
+function leerDatosServicios(servicios) {
+  const infoServicios = {
     titulo: servicios.querySelector(".card-title").textContent,
     texto: servicios.querySelector(".card-text").textContent,
+    id: servicios.querySelector(".btn").getAttribute("data-id"),
   };
 
   //Agregar al carrito
-  articulosCarrito = [...articulosCarrito, infoServicio];
+  articulosCarrito = [...articulosCarrito, infoServicios];
   console.log(articulosCarrito);
 
   carritoHTML();
@@ -67,7 +68,7 @@ function carritoHTML() {
     <div class="container">
     <h5>${servicios.titulo}</h5>
     <p>${servicios.texto}</p>
-    <button class="btn btn-danger">Eliminar</button>
+    <button class="btn btn-danger" id="${servicios.id}">Eliminar</button>
     </div>
     `;
     carrito.appendChild(row);
@@ -78,13 +79,15 @@ function limpiarHTML() {
   carrito.innerHTML = "";
 }
 
+carrito.addEventListener("click", eliminarServicios);
+
 // eliminar servicios
 
-function eliminarServicio(e) {
+function eliminarServicios(e) {
   if (e.target.classList.contains("btn-danger")) {
-    let servicioID = e.target.getAttribute("id");
+    let serviciosID = e.target.getAttribute("id");
     articulosCarrito = articulosCarrito.filter(
-      (servicio) => servicio.id !== servicioID
+      (servicios) => servicios.id !== serviciosID
     );
     carritoHTML();
   }
