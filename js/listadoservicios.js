@@ -1,4 +1,28 @@
-// VARIABLES
+const lista = document.querySelector("#listado");
+fetch("../js/data.json")
+    .then((res) => res.json())
+    .then((data) => {
+        data.forEach((servicioss) => {
+            const div = document.createElement("div");
+            div.innerHTML = `
+
+      <div class="card">
+      <div class="${servicioss.card}">
+          <img src=${servicioss.img} class="card-img-top" alt="...">
+
+
+          <div class="card-body">
+              <h5 class="card-title">${servicioss.nombre}</h5>
+              <p class="card-text">${servicioss.descripcion}</p>
+                  <h5>${servicioss.precio}</h5>
+              <a href="#" class="btn btn-primary" data-${servicioss.id} >Añadir</a>
+          </div>
+      </div>
+  </div>
+        `;
+            lista.append(div);
+
+            // VARIABLES
 let nombreForm = document.querySelector("#nombreyapellido");
 let dateForm = document.querySelector("#date");
 
@@ -125,3 +149,12 @@ function eliminarServicios(e) {
     carritoHTML();
   }
 }
+
+
+// agrego fetch
+
+
+        });
+    });
+
+    

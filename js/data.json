@@ -1,0 +1,41 @@
+[
+    {
+    "nombre": "Lifting de pestañas",
+    "precio": "$2800",
+    "zona": "pestañas",
+    "descripcion": "Es un tratamiento que estira la pestaña natural y le crea una curvatura hacia arriba, dandole un aspecto de mayor longitud",
+    "id": 1,
+    "img": "../images/imglifting.jpg",
+    "card": "card1"
+},
+
+{
+    "nombre": "Extensiones de pestañas",
+    "precio": "$3000",
+    "zona": "pestañas",
+    "descripcion": "Es una tecnica pelo por pelo clasica, en la cual colocamos una extension por pestaña natural. Se aplica sobre la pestaña natural y la misma no se daña.",
+    "id": 2,
+    "img": "../images/imgext.jpg",
+    "card": "card2"
+},
+
+{
+    "nombre": "Laminado de cejas",
+    "precio": "$2800",
+    "zona": "cejas",
+    "descripcion": "Es un tratamiento que alisa y peina las cejas. Ideal para esas cejas abundantes, rizadas y despeinadas, dandole la direccion que deseamos.",
+    "id": 3,
+    "img": "../images/imglaminado.jpg",
+    "card": "card3"
+},
+
+{
+    "nombre": "Perfilado de cejas",
+    "precio": "$1500",
+    "zona": "cejas",
+    "descripcion": "Es un servicio personalizado ya que cada ceja es unica. Se le da definicion correcta respetando su forma natural. Merjora la simetria de las cejas y reafirma la mirada",
+    "id": 4,
+    "img": "../images/imgperfilado.jpg",
+    "card": "card4"
+}
+]
