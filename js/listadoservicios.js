@@ -1,5 +1,5 @@
 const lista = document.querySelector("#listado");
-fetch("../js/data.json")
+fetch("js/data.JSON")
     .then((res) => res.json())
     .then((data) => {
         data.forEach((servicioss) => {
@@ -15,7 +15,7 @@ fetch("../js/data.json")
               <h5 class="card-title">${servicioss.nombre}</h5>
               <p class="card-text">${servicioss.descripcion}</p>
                   <h5>${servicioss.precio}</h5>
-              <a href="#" class="btn btn-primary" data-${servicioss.id} >Añadir</a>
+              <a href="#" class="btn btn-primary" data-id="${servicioss.id}" >Añadir</a>
           </div>
       </div>
   </div>
